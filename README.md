@@ -1,10 +1,11 @@
-# Dev Portfolio
+# 소개
 
-This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
+안녕하세요 웹 개발자 박민지입니다.
+2020/04 ~ 2020/09 [NCS]디지털컨버전스 융합 응용SW 개발자 양성 과정을 수료하였으며,
+ORACLE, JAVA, Servlet, JSP, JDBC, Spring Framework, Mybatis, Ajax, HTML, CSS, JavaScript 등을 이용하고 활용하여 웹페이지를 제작할 수 있습니다.
+API를 연구하고 새로운 것에 흥미가 높아 적응력이 빠릅니다.
 
-To view a live demo, [click here](https://parkminji-m63mini.github.io/parkminji_m63mini.github.io/).
-
-Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgerald/devblog).
+포트폴리오는 여기에서 봐주세요. [click here](https://parkminji-m63mini.github.io/parkminji_m63mini.github.io/).
 
 ## Features
 
