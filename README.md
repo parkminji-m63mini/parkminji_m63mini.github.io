@@ -20,7 +20,7 @@ SODA(소비를 생각하다)
 
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/68366848/95024359-87b05d00-06bd-11eb-8b54-92f7afdf2825.PNG" style="width: 600px;"/>
+<img src="https://user-images.githubusercontent.com/68366848/95024638-5042b000-06bf-11eb-84e9-911324fa9dfc.png" style="width: 600px;"/>
 </p>
 - 캡쳐화면 - 코드
 
