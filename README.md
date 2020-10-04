@@ -14,9 +14,9 @@ SODA(소비를 생각하다)
 
 
 - 소비분석 그래프 : 사용자의 소비를 나이대, 성별, 직업별로 다양하게 비교하여줌으로써 한눈에 소비현황을 알아볼 수 있다. [API : chart.js]
-<div style="text-align:center">
+<p align="center">
     <img src="https://user-images.githubusercontent.com/68366848/95024356-7ff0b880-06bd-11eb-940e-466c4c23367d.PNG" />
-</div>
+</p>
 <img src="https://user-images.githubusercontent.com/68366848/95024359-87b05d00-06bd-11eb-8b54-92f7afdf2825.PNG" style="max-width:100%;width: 600px;padding-left: 210px;"/>
 - 캡쳐화면 - 코드
 
