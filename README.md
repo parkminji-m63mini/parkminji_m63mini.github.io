@@ -5,15 +5,15 @@
 ORACLE, JAVA, Servlet, JSP, JDBC, Spring Framework, Mybatis, Ajax, HTML, CSS, JavaScript 등을 이용하고 활용하여 웹페이지를 제작할 수 있습니다.
 API를 연구하고 새로운 것에 흥미가 높아 적응력이 빠릅니다.
 
-포트폴리오는 여기에서 봐주세요. [click here](https://parkminji-m63mini.github.io/parkminji_m63mini.github.io/).
+포트폴리오는 여기에서 봐주세요. [click](https://parkminji-m63mini.github.io/parkminji_m63mini.github.io/).
 
-## Features
+## 프로젝트
 
-* Gulp ready (compiles Sass and minifies JS)
-* Sass ready with lots of commenting
-* Fully responsive
-* Comes with Bootstrap grid system
-* Easy colour changes can be done through simple variable edits
+* 소비를 생각하다 : 소다
+
+
+
+* AM(alba management)
 
 ## Contents
 
