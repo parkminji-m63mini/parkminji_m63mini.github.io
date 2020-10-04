@@ -5,7 +5,7 @@
 ORACLE, JAVA, Servlet, JSP, JDBC, Spring Framework, Mybatis, Ajax, HTML, CSS, JavaScript 등을 이용하고 활용하여 웹페이지를 제작할 수 있습니다.
 API를 연구하고 새로운 것에 흥미가 높아 적응력이 빠릅니다.
 
-포트폴리오는 여기에서 봐주세요. [click](https://parkminji-m63mini.github.io/parkminji_m63mini.github.io/).
+포트폴리오는 여기에서 봐주세요. [Portfolio](https://parkminji-m63mini.github.io/parkminji_m63mini.github.io/).
 
 ## 프로젝트
 
