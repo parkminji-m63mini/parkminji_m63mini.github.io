@@ -17,7 +17,11 @@ SODA(소비를 생각하다)
 <p align="center">
     <img src="https://user-images.githubusercontent.com/68366848/95024356-7ff0b880-06bd-11eb-940e-466c4c23367d.PNG" />
 </p>
-<img src="https://user-images.githubusercontent.com/68366848/95024359-87b05d00-06bd-11eb-8b54-92f7afdf2825.PNG" style="max-width:100%;width: 600px;padding-left: 210px;"/>
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/68366848/95024359-87b05d00-06bd-11eb-8b54-92f7afdf2825.PNG" style="width: 600px;"/>
+</p>
 - 캡쳐화면 - 코드
 
 - 꿀팁게시판 : 카테고리별로 나누어 글이 작성가능하며 조회도 가능하다. 댓글형식으로 사용되는 게시판
