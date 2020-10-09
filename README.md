@@ -64,7 +64,7 @@ SODA(소비를 생각하다)
             </script> 
 ```
 
-
+<hr>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68366848/95024638-5042b000-06bf-11eb-84e9-911324fa9dfc.png" style="width: 600px;"/>
 </p>	
