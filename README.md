@@ -183,9 +183,8 @@ SODA(소비를 생각하다)
 </p>	
 ```HTML
 
-<!--쿠폰 카테고리 눌렀을 때의 AJAX-->
 $("#cupon").on("click", function(){
-     			
+<!--쿠폰 카테고리 눌렀을 때의 AJAX-->
      			
 	$.ajax({url : "cuponList.do",
 		dataType : "JSON",
