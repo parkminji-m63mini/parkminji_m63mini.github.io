@@ -70,6 +70,25 @@ SODA(소비를 생각하다)
 </p>	
 	
 ```HTML
+<!--데이터비교-->
+<%int graph5Avg = 0; %>
+<%String graph5String = null; %>
+
+<%if(sum1 > graph5_users.get(0).getSum()){ %>
+	 <!-- 회원의 지출이 더 많을 때 -->
+	<%graph5Avg = sum1 -graph5_users.get(0).getSum();%>
+	<%graph5String = "원 더 많이 지출했습니다.";%>
+
+<%}else if(sum1 < graph5_users.get(0).getSum()){ %>
+	<!-- 평균보다 덜 지출했을 때 -->
+	<%graph5Avg = graph5_users.get(0).getSum() - sum1;%>
+	<%graph5String = "원 더 적게 지출했습니다.";%>
+
+<%}else{ %>
+	<!-- 평균과 똑같을 때 -->
+	<%graph5String = "...평균만큼 사용하셨네요!";%>
+<%} %>
+
 <div id='graph5'>
 <!-- 5 회원 직업별 지출 금액 비교 달별로 꺽은선 그래프 2개 (회원, 평균) + 코멘트  -->
 	<div class="containera graph5" >
@@ -152,33 +171,7 @@ SODA(소비를 생각하다)
 				
 	</div>
 			
-	<!-- 데이터 비교 -->
-	<%int graph6Avg = 0; %>
-	<%String graph6String = null; %>
-	<%String graph6String2 = null; %>
-
-	<%if(loginMember.getGender().equals("남")){ %>
-		<%if(male.getSum() > female.getSum()){ %>
-			<%graph6Avg = male.getSum() - female.getSum();%>
-			<%graph6String = "남성이 여성보다 평균 ";%>
-			<%graph6String2 = "원 더 많이 지출했습니다.";%>
-		<%}else{ %>
-			<%graph6Avg = female.getSum() - male.getSum();%>
-			<%graph6String = "남성이 여성보다 평균 ";%>
-			<%graph6String2 = "원 더 적게 지출했습니다.";%>
-		<%} %>
-	<%}else{ %>
-			<%if(male.getSum() < female.getSum()){ %>
-			<%graph6Avg =  female.getSum() - male.getSum();%>
-			<%graph6String = "여성이 남성보다 평균 ";%>
-			<%graph6String2 = "원 더 많이 지출했습니다.";%>
-		<%}else{ %>
-			<%graph6Avg = male.getSum() - female.getSum();%>
-			<%graph6String = "여성이 남성보다 평균";%>
-			<%graph6String2 = "원 더 적게 지출했습니다.";%>
-		<%} %>
-
-	<%} %>
+	
 ```
 
 - 캡쳐화면 - 코드
