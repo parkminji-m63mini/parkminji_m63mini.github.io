@@ -67,7 +67,120 @@ SODA(소비를 생각하다)
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68366848/95024638-5042b000-06bf-11eb-84e9-911324fa9dfc.png" style="width: 600px;"/>
-</p>
+</p>	
+	
+```HTML
+<div id='graph5'>
+<!-- 5 회원 직업별 지출 금액 비교 달별로 꺽은선 그래프 2개 (회원, 평균) + 코멘트  -->
+	<div class="containera graph5" >
+                  <canvas class="graph" id="myChart8" width="400px" height="300px"></canvas> 
+                  <p class="text-p"><%=loginMember.getJob()%> 평균 지출 금액</p>
+                    <p id="btn"> 
+			    <button id="userBtn"  type="button" class="btn btn-success textBtn">회원</button>
+			   <button type="button" id="usersBtn"class="btn btn-success textBtn">회원평균</button>
+		    </p>
+	</div> 
+                
+	<span  class="text-graph2"><h2 class='textH4'><%=graph11_user.get(0).getCreateDate().substring(3, 5)%>월에는 <span id="cate"><%=loginMember.getJob() %></span>
+	의 평균 지출 보다 <span id='user'><%=graph5Avg%></span> <%=graph5String %> </h2></span>
+             
+		
+ <script> 
+            const colors8 = ['rgb(2, 155, 111)','rgb(245, 242, 161)','rgb(191, 40, 145)','#c3e6cb','#dc3545','#6c757d']; 
+            var ctx8 = document.getElementById('myChart8'); 
+            var chartData8 = { labels: [
+            	  <%if(graph11_user.size() <= 4){%>
+			<%for(int i = 0; i<graph11_user.size(); i++){%>
+			"<%=graph11_user.get(i).getCreateDate()%>월",
+			<%}%>
+		<%}else{%>
+            		<%for(int i = 0; i<=4; i++){%>
+			"<%=graph11_user.get(i).getCreateDate()%>월",
+            		<%}%>
+            	<%}%>
+            	], 
+          		  
+	  //파란선 회원
+            datasets: [{ data: [
+		            	 <%if(graph11_user.size() <= 4){%>
+					<%for(int i = 0; i<graph11_user.size(); i++){%>
+						(<%=graph11_user.get(i).getEat()%> + <%=graph11_user.get(i).getTrans()%> 
+						+ <%=graph11_user.get(i).getPhone()%> + <%=graph11_user.get(i).getEtc()%> 
+							),
+						<%}%>
+				<%}else{%>
+            				<%for(int i = 0; i<=4; i++){%>
+					(<%=graph11_user.get(i).getEat()%> + <%=graph11_user.get(i).getTrans()%> +
+					<%=graph11_user.get(i).getPhone()%> + <%=graph11_user.get(i).getEtc()%> 
+					),
+				<%}%>
+				<%}%>
+            	], 
+            backgroundColor: 'transparent', 
+            borderColor: colors8[2], 
+            borderWidth: 3, 
+            pointBackgroundColor: colors8[0] },
+			
+	   //빨간선
+            { data: [
+            	  
+  		<%if(graph11_user.size() <= 4){%>
+			<%for(int i = 0; i<graph11_user.size(); i++){%>
+			<%=graph5_users.get(i).getSum()%>,
+				<%}%>
+		<%}else{%>
+            	  <%for(int i = 0; i<=4; i++){%>
+			<%=graph5_users.get(i).getSum()%>,
+			<%}%>
+		<%}%>
+            	  ], 
+              backgroundColor: colors8[1], 
+              borderColor: colors8[0], 
+              borderWidth: 3,
+               pointBackgroundColor: colors8[0] } ] }; 
+          
+          	var myChart8 = new Chart(ctx8, { 
+              // 챠트 종류를 선택 
+              type: 'line', 
+              // 챠트를 그릴 데이타 
+              data: chartData8, 
+              // 옵션 
+              options: { responsive: false,
+                          legend: { display: false } } });
+
+            </script> 
+				
+	</div>
+			
+	<!-- 데이터 비교 -->
+	<%int graph6Avg = 0; %>
+	<%String graph6String = null; %>
+	<%String graph6String2 = null; %>
+
+	<%if(loginMember.getGender().equals("남")){ %>
+		<%if(male.getSum() > female.getSum()){ %>
+			<%graph6Avg = male.getSum() - female.getSum();%>
+			<%graph6String = "남성이 여성보다 평균 ";%>
+			<%graph6String2 = "원 더 많이 지출했습니다.";%>
+		<%}else{ %>
+			<%graph6Avg = female.getSum() - male.getSum();%>
+			<%graph6String = "남성이 여성보다 평균 ";%>
+			<%graph6String2 = "원 더 적게 지출했습니다.";%>
+		<%} %>
+	<%}else{ %>
+			<%if(male.getSum() < female.getSum()){ %>
+			<%graph6Avg =  female.getSum() - male.getSum();%>
+			<%graph6String = "여성이 남성보다 평균 ";%>
+			<%graph6String2 = "원 더 많이 지출했습니다.";%>
+		<%}else{ %>
+			<%graph6Avg = male.getSum() - female.getSum();%>
+			<%graph6String = "여성이 남성보다 평균";%>
+			<%graph6String2 = "원 더 적게 지출했습니다.";%>
+		<%} %>
+
+	<%} %>
+```
+
 - 캡쳐화면 - 코드
 
 - 꿀팁게시판 : 카테고리별로 나누어 글이 작성가능하며 조회도 가능하다. 댓글형식으로 사용되는 게시판
