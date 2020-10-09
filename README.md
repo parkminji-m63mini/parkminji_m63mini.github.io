@@ -32,8 +32,7 @@ SODA(소비를 생각하다)
    <script> 
 					 
             // chart colors 
-            const colors2 = ['rgb(2, 155, 111)','rgb(245, 242, 161)','rgb(57, 90, 206)','#c3e6cb','#dc3545','#6c757d']; 
-            // const datas = [589, 445, ...] 선언하고 아래서 datas 변수만 써줘도 된다. 
+            const colors2 = ['rgb(2, 155, 111)','rgb(245, 242, 161)','rgb(57, 90, 206)','#c3e6cb','#dc3545','#6c757d'];
             var ctx2 = document.getElementById('myChart2'); 
             var chartData2 = { labels: ["식비", "교통비", "통신비",  "기타지출", "저축"], 
           		  
