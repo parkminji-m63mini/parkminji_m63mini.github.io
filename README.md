@@ -20,20 +20,16 @@ SODA(소비를 생각하다)
 
 ```HTML
     <!--1-2 회원 성별 지출 금액 비교 카테고리별로 꺽은선 그래프 2개 (회원, 평균)  -->                                      
-				      <div class="containera" >
-                  <canvas class="graph" id="myChart2" width="400px" height="300px"></canvas> 
-                  <p class="text-p">회원 카테고리별 평균 지출 금액(당월)</p>
-                    <p id="btn"> <button id="userBtn2"  type="button" class="btn btn-success textBtn">
-										회원
-									</button>
-									<button type="button" id="usersBtn"class="btn btn-success textBtn">
-										회원평균
-									</button>
-									</p>
-                </div>
+      <div class="containera" >
+	  <canvas class="graph" id="myChart2" width="400px" height="300px"></canvas> 
+	  <p class="text-p">회원 카테고리별 평균 지출 금액(당월)</p>
+	    <p id="btn"> <button id="userBtn2"  type="button" class="btn btn-success textBtn">회원</button>
+		<button type="button" id="usersBtn"class="btn btn-success textBtn">회원평균</button>
+	    </p>
+     </div>
                 
                  
-					 <script> 
+   <script> 
 					 
             // chart colors 
             const colors2 = ['rgb(2, 155, 111)','rgb(245, 242, 161)','rgb(57, 90, 206)','#c3e6cb','#dc3545','#6c757d']; 
@@ -41,50 +37,30 @@ SODA(소비를 생각하다)
             var ctx2 = document.getElementById('myChart2'); 
             var chartData2 = { labels: ["식비", "교통비", "통신비",  "기타지출", "저축"], 
           		  
-          		  //파란선 회원
-            datasets: [{ data: [
-            	
-           // 	589, 445, 483, 503, 689, 123
-            					
-            					<%=graph12_user.getEat()%> ,
-            					<%=graph12_user.getTrans()%> ,
-											<%=graph12_user.getPhone()%> ,
-											<%=graph12_user.getEtc()%> ,
-											<%=graph12_user.getSaving()%>
-								
-						
-           
-            	
-            	], 
+	   //파란선 회원
+            datasets: [{ data: [<%=graph12_user.getEat()%> ,<%=graph12_user.getTrans()%> ,<%=graph12_user.getPhone()%> ,
+				<%=graph12_user.getEtc()%> ,<%=graph12_user.getSaving()%>], 
             backgroundColor: 'transparent', 
             borderColor: colors2[2], 
             borderWidth: 3, 
             pointBackgroundColor: colors2[0] },
 			
-           		 //빨간선
-              { data: [
-            	 // 346, 503, 609, 503, 589
-            	  
-          		
-							<%=graph12_users.getEat()%> ,
-							<%=graph12_users.getTrans()%> ,
-							<%=graph12_users.getPhone()%> ,
-							<%=graph12_users.getEtc()%> ,
-							<%=graph12_users.getSaving()%>
-            	  ], 
+             //빨간선
+              { data: [<%=graph12_users.getEat()%> ,<%=graph12_users.getTrans()%> ,<%=graph12_users.getPhone()%> ,
+			<%=graph12_users.getEtc()%> ,<%=graph12_users.getSaving()%>  	  ], 
               backgroundColor: colors2[1], 
               borderColor: colors2[0], 
               borderWidth: 3,
                pointBackgroundColor: colors2[0] } ] }; 
           
           	var myChart2 = new Chart(ctx2, { 
-              // 챠트 종류를 선택 
-              type: 'line', 
-              // 챠트를 그릴 데이타 
-              data: chartData2, 
-              // 옵션 
-              options: { responsive: false,
-                          legend: { display: false } } });
+						      // 챠트 종류를 선택 
+						      type: 'line', 
+						      // 챠트를 그릴 데이타 
+						      data: chartData2, 
+						      // 옵션 
+						      options: { responsive: false,
+								  legend: { display: false } } });
 
             </script> 
 ```
