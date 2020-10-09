@@ -182,6 +182,7 @@ SODA(소비를 생각하다)
 <img src="https://user-images.githubusercontent.com/68366848/95639604-0816f980-0ad4-11eb-9c9c-3167c5cfe97d.PNG" style="width: 600px;"/>
 </p>	
 ```HTML
+
 <!--쿠폰 카테고리 눌렀을 때의 AJAX-->
 $("#cupon").on("click", function(){
      			
