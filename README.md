@@ -181,6 +181,52 @@ SODA(소비를 생각하다)
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68366848/95639604-0816f980-0ad4-11eb-9c9c-3167c5cfe97d.PNG" style="width: 600px;"/>
 </p>	
+```HTML
+<!--쿠폰 카테고리 눌렀을 때의 AJAX-->
+$("#cupon").on("click", function(){
+     			
+     			
+	$.ajax({url : "cuponList.do",
+		dataType : "JSON",
+		success : function(cupon){
+			
+			// 댓글 목록이 추가되는 영역을 초기화
+			$("#ta").html("");
+
+			var $tr = $("<tr>");
+
+			var $tdNoTop = $("<td>").addClass("topTable boardNo").html("번호");
+			var $tdCTTop = $("<td>").addClass("topTable boardCategory").html("카테고리");
+			var $tdIdTop = $("<td>").addClass("topTable boardMemberId").html("아이디");
+			var $tdContentTop = $("<td>").addClass("topTable boardContent").html("내용");
+			var $tdDateTop = $("<td>").addClass("topTable boardDate").html("작성일");
+
+			$tr.append($tdNoTop, $tdCTTop, $tdIdTop, $tdContentTop, $tdDateTop);
+
+			$("#ta").append($tr);
+
+			$.each(cupon, function(i){ 
+														
+					var $tr2 = $("<tr>");
+
+					var $tdNo = $("<td>").addClass("boardNo").html(cupon[i].boardNo);
+					var $tdCT = $("<td>").addClass("tdCategory boardCategory").html(cupon[i].category);
+					var $tdId = $("<td>").addClass("boardMemberId").html(cupon[i].sodaId);
+					var $tdContent = $("<td>").addClass("boardContent contentColor").html(cupon[i].content);
+					var $tdDate = $("<td>").addClass("boardDate").html(cupon[i].createDate);
+
+					$tr2.append( $tdNo, $tdCT, $tdId, $tdContent, $tdDate);
+
+					$("#ta").append($tr2);
+					});
+		}, error : function(){
+			console.log("ajax 통신실패");
+		}
+
+	});
+
+});
+```
 
 - 캡쳐화면 - 코드
 
