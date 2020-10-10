@@ -267,7 +267,56 @@ public class UserSelectServlet extends HttpServlet {
 
 }
 ```
+```HTML
+<div class="container-fluid">
 
+          <table class="table table-hover">
+        	<tr >
+		<th class="userTh top">선택</th>
+		<th class="userTh top thNo">번호</th>
+		<th class="userTh top thId">아이디</th>
+		<th class="userTh top thName">이름</th>
+		<th class="userTh top thEmail">이메일</th>
+		<th class="userTh top">전화번호</th>
+		<th class="userTh top thAddr">주소</th>
+		<th class="userTh top thGender">성별</th>
+		<th class="userTh top thAge">나이</th>
+		<th class="userTh top thJob">직업</th>
+		<th class="userTh top">가입일</th>
+		<th class="userTh top thNo">상태</th>
+        	</tr>
+        	
+	<%for(Member u : users){ %>
+		<tr >
+		<td class="userTh" ><input type='checkbox' name='checkNo' value="<%=u.getSoda_no()%>"></td>
+		<td class="userTh thNo"><%=u.getSoda_no() %></td>
+		<td class="userTh thId"><%=u.getSoda_Id() %></td>
+		<td class="userTh thName"><%=u.getSoda_name() %></td>
+		<td class="userTh "><%=u.getEmail() %></td>
+		<td class="userTh "><%=u.getPhone() %></td>
+		<td class="userTh thAddr"><%=u.getAddress() %></td>
+		<td class="userTh thGender"><%=u.getGender() %></td>
+		<td class="userTh thAge"><%=u.getAge() %></td>
+		<td class="userTh thJob"><%=u.getJob() %></td>
+		<td class="userTh"><%=u.getEnroll_date()%></td>
+		<td class="userTh thNo"><%=u.getStatus()%></td>
+		</tr>
+        		
+        	<%} %>
+        
+        </table>
+        
+        
+        <div class="row">
+        	<div class="col-md-11">
+        	<div class="col-md-1">
+		<button type="button" class="btn btn-primary deleteButton">삭제</button>
+        	</div>
+        	
+        </div>
+        </div>
+        </div>
+```
 - 캡쳐화면 - 코드
 
 AM(alba management) 
