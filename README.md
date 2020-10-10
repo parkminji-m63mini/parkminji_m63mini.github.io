@@ -317,10 +317,18 @@ public class UserSelectServlet extends HttpServlet {
         </div>
         </div>
 ```
-- 캡쳐화면 - 코드
 
+<hr>
 AM(alba management) 
 아르바이트생으로만 구성되어있는 소규모 사업자를 위한 인사관리 시스템. 알바생의 인사관리와 스케줄, 급여관리를 빠르고 편리하게 관리 조회가 가능한 그룹웨어 기반 웹페이지.
+
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68366848/95024356-7ff0b880-06bd-11eb-940e-466c4c23367d.PNG" />
+</p>
+
+```HTML
+```
 
 - 스케쥴 : 사용자의 스케쥴을 한눈에 확인 가능하며, 알바생의 스케쥴을 입력, 수정, 삭제가 가능하다. [API : FullCalrendar]
 - 캡쳐화면 - 코드(입력, 수정, 삭제)
