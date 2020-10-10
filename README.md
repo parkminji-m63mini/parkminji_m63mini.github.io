@@ -348,12 +348,6 @@ if(${loginMember.memberGrade== 'R'}){
 				var startTime = list[i].workStart;
 				var endTime = list[i].workEnd;
 				var workNo = list[i].workNo;
-				/* id: 999,
-			    title: '리아',
-			    start: new Date(y, m, 22, 16, 0),
-			    end : new Date(y, m, 22, 16, 0)
-			    allDay: false,
-			    className: 'info'*/
 
 
 			    if(endTime == 0){
