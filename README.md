@@ -174,7 +174,6 @@ SODA(소비를 생각하다)
 	
 ```
 
-- 캡쳐화면 - 코드
 <hr>
 - 꿀팁게시판 : 카테고리별로 나누어 글이 작성가능하며 조회도 가능하다. 댓글형식으로 사용되는 게시판
 
@@ -230,9 +229,45 @@ $("#cupon").on("click", function(){
 });
 ```
 
-- 캡쳐화면 - 코드
-
+<hr>
 - 관리자 : 사용자의 탈퇴, 정보를 관리하고 게시판의 게시글을 한눈에 관리할 수 있다.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/68366848/95640383-8628cf80-0ad7-11eb-8d14-0534b99df134.JPG" style="width: 600px;"/>
+</p>
+
+
+```HTML
+
+@WebServlet("/user/userSelect.do")
+public class UserSelectServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		try {
+			List<Member> users = new MemberService().selectUsers();
+			
+			String path = "/WEB-INF/views/user/userView.jsp";
+			request.setAttribute("users", users);
+			RequestDispatcher view = request.getRequestDispatcher(path);
+			
+			view.forward(request, response);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}
+```
+
 - 캡쳐화면 - 코드
 
 AM(alba management) 
