@@ -320,9 +320,9 @@ public class UserSelectServlet extends HttpServlet {
 
 <hr>
 AM(alba management) 
-아르바이트생으로만 구성되어있는 소규모 사업자를 위한 인사관리 시스템. 알바생의 인사관리와 스케줄, 급여관리를 빠르고 편리하게 관리 조회가 가능한 그룹웨어 기반 웹페이지.
+<br>아르바이트생으로만 구성되어있는 소규모 사업자를 위한 인사관리 시스템. 알바생의 인사관리와 스케줄, 급여관리를 빠르고 편리하게 관리 조회가 가능한 그룹웨어 기반 웹페이지.
 
-
+- 스케쥴 : 사용자의 스케쥴을 한눈에 확인 가능하며, 알바생의 스케쥴을 입력, 수정, 삭제가 가능하다. [API : FullCalrendar]
 <p align="center">
     <img src="https://user-images.githubusercontent.com/68366848/95640803-85913880-0ad9-11eb-83ba-f2696fb52c0f.PNG" />
 </p>
@@ -380,7 +380,7 @@ if(${loginMember.memberGrade== 'R'}){
 		});
 ```
 
-- 스케쥴 : 사용자의 스케쥴을 한눈에 확인 가능하며, 알바생의 스케쥴을 입력, 수정, 삭제가 가능하다. [API : FullCalrendar]
+
 - 캡쳐화면 - 코드(입력, 수정, 삭제)
 
 - 파트타임 : 사용자가 편리한 스케쥴 입력을 위해 지정한 임의의 시간과 별명. 스케쥴에 사용되거나 조회에 사용된다.
