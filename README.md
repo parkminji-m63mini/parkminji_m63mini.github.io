@@ -324,10 +324,60 @@ AM(alba management)
 
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/68366848/95024356-7ff0b880-06bd-11eb-940e-466c4c23367d.PNG" />
+    <img src="https://user-images.githubusercontent.com/68366848/95640803-85913880-0ad9-11eb-83ba-f2696fb52c0f.PNG" />
 </p>
 
 ```HTML
+var calList = [];		
+				
+if(${loginMember.memberGrade== 'R'}){
+	  // 아이디가 사장님일 때
+	  	 
+  $.ajax({
+		url : "master/calendarView/",
+		dataType : "JSON",
+		async : false,
+		success : function(list){
+			console.log(list);
+			$.each(list, function(i){
+				var year = list[i].workDay.toString().substring(0,4);
+				var month = list[i].workDay.toString().substring(5,7) - 1;
+				var day = list[i].workDay.toString().substring(8,10);
+				var name = list[i].memberName;
+				var startTime = list[i].workStart;
+				var endTime = list[i].workEnd;
+				var workNo = list[i].workNo;
+				/* id: 999,
+			    title: '리아',
+			    start: new Date(y, m, 22, 16, 0),
+			    end : new Date(y, m, 22, 16, 0)
+			    allDay: false,
+			    className: 'info'*/
+
+
+			    if(endTime == 0){
+				endTime = 24;
+			    }
+
+				var start = new Date(year, month, day, startTime, 0);
+				var end = new Date(year, month, day, endTime, 0);
+				var obj = {"title" : name ,"start" : start, "end" : end, "allDay" : false, 
+					 "color" : "#"+Math.round(Math.random()*0xffffff).toString(16)};
+							
+				calList.push(obj);
+							
+				$workNo =$("<input>", {type : "hidden", name : "workNo", 
+					value : list[i].workNo});
+
+				console.log("일번호 " + list[i].workNo);
+
+				$("form[name='updateCalendarForm']").append($workNo);
+			        });
+						
+		}, error : function(){
+			console.log("ajax 통신 실패");
+		}
+		});
 ```
 
 - 스케쥴 : 사용자의 스케쥴을 한눈에 확인 가능하며, 알바생의 스케쥴을 입력, 수정, 삭제가 가능하다. [API : FullCalrendar]
